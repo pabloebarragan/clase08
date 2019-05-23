@@ -1,0 +1,10 @@
+            if (numericUpDownCantidad.Value > this.producto.Stock)
+            {
+                MessageBox.Show("Supero el stock disponible \n", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            if (numericUpDownCantidad.Value <= producto.Stock)
+            {
+                comiqueria.Vender(producto, (int)numericUpDownCantidad.Value);
+                MessageBox.Show("Se Vendio..!", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DialogResult = DialogResult.OK;
+            }
